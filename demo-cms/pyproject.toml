@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "demo-cms"
+version = "0.1.0"
+description = ""
+authors = ["Aldrin Montana <octalene.dev@pm.me>"]
+readme = "README.md"
+packages = [{include = "demo_cms"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+ibis-substrait = "^2.26.0"
+pyarrow = "^11.0.0"
+pandas = "^1.5.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
