@@ -1,0 +1,21 @@
+input {
+  project {
+    common {
+      emit {
+        output_mapping: 9
+        output_mapping: 10
+        output_mapping: 11
+        output_mapping: 12
+      }
+    }
+    input {
+      read {
+        base_schema { names: "region" ...  }
+        named_table { names: "HouseValues" }
+      }
+    }
+    expressions { selection { ... } }
+  }
+}
+
+

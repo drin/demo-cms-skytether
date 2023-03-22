@@ -1,0 +1,134 @@
+relations {
+  root {
+    input {
+      project {
+        common {
+          emit {
+            output_mapping: 9
+            output_mapping: 10
+            output_mapping: 11
+            output_mapping: 12
+          }
+        }
+        input {
+          read {
+            common {
+              direct {
+              }
+            }
+            base_schema {
+              names: "region"
+              names: "end_month"
+              names: "end_year"
+              names: "median_price"
+              names: "homes_sold"
+              names: "new_listings"
+              names: "inventory"
+              names: "days_on_market"
+              names: "average_sale_to_list"
+              struct {
+                types {
+                  string {
+                    nullability: NULLABILITY_NULLABLE
+                  }
+                }
+                types {
+                  string {
+                    nullability: NULLABILITY_NULLABLE
+                  }
+                }
+                types {
+                  i64 {
+                    nullability: NULLABILITY_NULLABLE
+                  }
+                }
+                types {
+                  i64 {
+                    nullability: NULLABILITY_NULLABLE
+                  }
+                }
+                types {
+                  i64 {
+                    nullability: NULLABILITY_NULLABLE
+                  }
+                }
+                types {
+                  i64 {
+                    nullability: NULLABILITY_NULLABLE
+                  }
+                }
+                types {
+                  i64 {
+                    nullability: NULLABILITY_NULLABLE
+                  }
+                }
+                types {
+                  i64 {
+                    nullability: NULLABILITY_NULLABLE
+                  }
+                }
+                types {
+                  fp64 {
+                    nullability: NULLABILITY_NULLABLE
+                  }
+                }
+                nullability: NULLABILITY_REQUIRED
+              }
+            }
+            named_table {
+              names: "sales"
+            }
+          }
+        }
+        expressions {
+          selection {
+            direct_reference {
+              struct_field {
+              }
+            }
+            root_reference {
+            }
+          }
+        }
+        expressions {
+          selection {
+            direct_reference {
+              struct_field {
+                field: 1
+              }
+            }
+            root_reference {
+            }
+          }
+        }
+        expressions {
+          selection {
+            direct_reference {
+              struct_field {
+                field: 2
+              }
+            }
+            root_reference {
+            }
+          }
+        }
+        expressions {
+          selection {
+            direct_reference {
+              struct_field {
+                field: 3
+              }
+            }
+            root_reference {
+            }
+          }
+        }
+      }
+    }
+    names: "region"
+    names: "end_month"
+    names: "end_year"
+    names: "median_price"
+  }
+}
+
