@@ -8,6 +8,7 @@ as recommended.
 
 # Data Schema
 
+```
 +--------------------------+-----------------------+
 | Column                   | Type                  |
 +--------------------------+-----------------------+
@@ -32,6 +33,7 @@ as recommended.
 | Average Sale To List MoM | String ([-]?[0-9.]+%) |
 | Average Sale To List YoY | String ([-]?[0-9.]+%) |
 +--------------------------+-----------------------+
+```
 
 
 <!-- Resources -->
