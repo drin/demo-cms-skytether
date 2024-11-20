@@ -34,7 +34,7 @@ from pathlib import Path
 import ibis
 from ibis_substrait.compiler.core import SubstraitCompiler
 
-from demo_cms.model import SalesSchema
+from demo_cms.model import HouseValues
 
 
 # ------------------------------
@@ -42,7 +42,7 @@ from demo_cms.model import SalesSchema
 
 if __name__ == '__main__':
     # Define the query
-    query_expr = SalesSchema['region', 'end_month', 'end_year', 'median_price']
+    query_expr = HouseValues['region', 'end_month', 'end_year', 'median_price']
 
     # SubstraitCompiler takes an ibis expr and creates a substrait plan
     substrait_compiler = SubstraitCompiler()

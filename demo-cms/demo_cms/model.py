@@ -15,9 +15,8 @@ import pyarrow
 # Module Variables
 
 # Schema for median house sales
-SalesSchema = ibis.table(
-    # Column names and types
-     [
+HouseValues = ibis.table(
+     [   # Column names and types
           ('region'              , 'string')
          ,('end_month'           , 'string')
          ,('end_year'            , 'int   ')
@@ -28,12 +27,11 @@ SalesSchema = ibis.table(
          ,('days_on_market'      , 'int   ')
          ,('average_sale_to_list', 'float ')
      ]
-    # primary key
-    ,name='sales'
+    ,name='HouseValues' # Table name
 )
 
 # Column types using pyarrow types
-SalesArrowTypes = [
+HouseValuesArrowTypes = [
      pyarrow.utf8()
     ,pyarrow.utf8()
     ,pyarrow.int64()
@@ -45,7 +43,7 @@ SalesArrowTypes = [
     ,pyarrow.float64()
 ]
 
-SalesArrowSchema = pyarrow.schema([
+HouseValuesArrowSchema = pyarrow.schema([
      ('region'              , pyarrow.utf8())
     ,('end_month'           , pyarrow.utf8())
     ,('end_year'            , pyarrow.int64())
